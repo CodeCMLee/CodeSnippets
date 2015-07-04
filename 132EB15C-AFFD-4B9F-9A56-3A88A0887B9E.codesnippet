@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>setupSubViews</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)setupSubViews
+{
+    UIScrollView *rootScrollView = [[UIScrollView alloc] init];
+    [self.view addSubview:rootScrollView];
+    
+    contentView = [[UIView alloc] init];
+    [rootScrollView addSubview:contentView];
+    
+    [self setupContentView];
+    
+    [rootScrollView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
+    [contentView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(rootScrollView);
+        make.width.equalTo(rootScrollView);
+    }];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>132EB15C-AFFD-4B9F-9A56-3A88A0887B9E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>setupSubViews</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
